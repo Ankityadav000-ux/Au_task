@@ -49,3 +49,13 @@ c=int(input("Enter the numerator of the third fraction: "))
 d=int(input("Enter the denominator of the forth fraction: "))
 sum = sum_of_fractions(a,b,c,d)
 print("The sum of the fractions is:",sum)
+
+###5
+{num1},num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+temp = num1
+num1 = num2
+num2 = temp
+
+print(f"After swapping: First number =  Second number = {num2}")
