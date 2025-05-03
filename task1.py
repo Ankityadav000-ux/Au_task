@@ -51,11 +51,36 @@ sum = sum_of_fractions(a,b,c,d)
 print("The sum of the fractions is:",sum)
 
 ###5
-{num1},num1 = float(input("Enter first number: "))
+def swap_numbers(a, b):
+    temp = a
+    a = b
+    b = temp
+    return a, b
+
+num1 = float(input("Enter first number: "))
 num2 = float(input("Enter second number: "))
 
-temp = num1
-num1 = num2
-num2 = temp
+num1, num2 = swap_numbers(num1, num2)
 
-print(f"After swapping: First number =  Second number = {num2}")
+print(f"After swapping: First number = {num1}, Second number = {num2}")
+
+###6
+def solve_animals(total_heads, total_legs):
+    chickens = (4 * total_heads - total_legs) // 2
+    dogs = total_heads - chickens
+
+    if chickens < 0 or dogs < 0 or (2 * chickens + 4 * dogs != total_legs):
+        return None  
+    else:
+        return chickens, dogs
+
+heads = int(input("Enter the total number of heads: "))
+legs = int(input("Enter the total number of legs: "))
+result = solve_animals(heads, legs)
+
+if result:
+    chickens, dogs = result
+    print(f"Number of chickens: {chickens}")
+    print(f"Number of dogs: {dogs}")
+else:
+    print("No valid solution exists with the given heads and legs.")
