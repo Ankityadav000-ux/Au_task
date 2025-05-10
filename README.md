@@ -1,2 +1,1 @@
-# ds-test1
-I am on my learning stage.
+Contain all the task of Data science class in AU IGNITE.
